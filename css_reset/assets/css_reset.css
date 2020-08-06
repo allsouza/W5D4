@@ -1,0 +1,21 @@
+html, head, title, link, nav, aside, body, header, figure, aside, section, form, label, footer, h1, h2, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: inherit;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+ol, ul {
+list-style: none;
+}
