@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require "byebug"
+
+puts 'Please enter your e-mail'
+email = gets.chomp
+user = User.where(email: email)
+
+puts "Enter 'visit' to visit a website or 'create' to create a short url:"
+input = gets.chomp
+
+if input == 'visit'
+    puts 'What website do you want to visit?'
+    website = gets.chomp
+    url = ShortenedUrl.where(short_url: website)
+elsif input == 'create'
+    puts 'Enter the URL'
+    long_url = gets.chomp
+    url = ShortenedUrl.create!(user[0], long_url)
+    puts url
+end
+Visit.record_visit!(user[0], url[0])
+
+
